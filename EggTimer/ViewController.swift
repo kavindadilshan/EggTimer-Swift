@@ -34,7 +34,9 @@
         var time = 0
         var timer = Timer()
         
+        @IBOutlet weak var titleLabel: UILabel!
         @IBAction func eggBtnPress(_ sender: UIButton) {
+            titleLabel.text = "How do you like your eggs?"
             let hardness = sender.currentTitle!
             time = array[hardness]!
             
@@ -59,6 +61,9 @@
 //                time=time-1
                 time-=1
                 print("timeCounter \(time)")
+            }else{
+                timer.invalidate();
+                titleLabel.text = "Done!"
             }
         }
         
