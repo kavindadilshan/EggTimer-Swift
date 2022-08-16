@@ -27,20 +27,22 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let softTime = 2
-    let mediumTime = 5
-    let hardTime = 10
+//    let softTime = 2
+//    let mediumTime = 5
+//    let hardTime = 10
+    let array = ["Soft":2,"Medium":5,"Hard":10]
     
     @IBAction func eggBtnPress(_ sender: UIButton) {
-        var hardness = sender.currentTitle
+        let hardness = sender.currentTitle!
         
-        if hardness == "Soft" {
-            print(softTime)
-        }else if hardness == "Medium"{
-            print(mediumTime)
-        }else{
-            print(hardTime)
-        }
+        print(array[hardness]!)
+//        if hardness == "Soft" {
+//            print(softTime)
+//        }else if hardness == "Medium"{
+//            print(mediumTime)
+//        }else{
+//            print(hardTime)
+//        }
     }
     
 
